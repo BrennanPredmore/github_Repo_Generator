@@ -21,7 +21,7 @@ inquirer.prompt([{
         {
             type: "list",
             name: "project_license",
-            choices: ["ISC", "MIT", "BSD", ],
+            choices: ["ISC", "MIT", "BSD", "Mozilla" ],
             message: "What kind of license should your project have? User can choose from list of items"
         },
         {
