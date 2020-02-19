@@ -27,6 +27,7 @@ Please make sure to update tests as appropriate.
 ## Link
 https://github.com/BrennanPredmore/github_Repo_Generator
 
+## Commands to run program
 ```
 npm i (install the program)
 npm run start (run the application)
