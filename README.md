@@ -27,8 +27,10 @@ Please make sure to update tests as appropriate.
 ## Link
 https://github.com/BrennanPredmore/github_Repo_Generator
 
+```
 npm i (install the program)
 npm run start (run the application)
+```
 
 ## License
 No License required. These are public pages. 
