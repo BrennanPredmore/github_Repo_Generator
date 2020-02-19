@@ -1,8 +1,12 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const axios = require("axios");
+const util = require('util');
 
-inquirer.prompt([{
+const writeFileSync = util.promisify(fs.writeFile);
+
+function promptUser() {
+return inquirer.prompt([{
             type: "input",
             name: "github_userName",
             message: "What is your GitHub username?"
@@ -46,21 +50,10 @@ inquirer.prompt([{
             name: "repo_contributing",
             message: "What does the user need to know about contributing to the repo?"
         }
-    ]
+    ]);
+}
 
-
-).then(function (answer) {
-
-    console.log(answer);
-
-    //TODO Generate data
-    const data = getData(answer);
-    fs.writeFile("index.html", data, function () {
-
-    })
-});
-
-function readMe() {
+function generateReadme(response, answer, answersURL) {
     return `
     
 # demo_day_project2
@@ -116,8 +109,30 @@ npm test
 
 <img src="https://avatars1.githubusercontent.com/u/4831868?v=4" alt="avatar" style="border-radius: 16px" width="30" />
 
-If you have any questions about the repo, open an issue or contact [calvincarter](https://api.github.com/users/calvincarter).
-
-
-    `;
+If you have any questions about the repo, open an issue or contact [calvincarter](https://api.github.com/users/calvincarter).`;
 }
+
+promptUser()
+  .then(function(answer) {
+    if (answer.project_license === 'Mozilla') {
+      answersURL = 'https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg'
+    }
+    if (answers.project_license === 'MIT') {
+      answersURL = 'https://img.shields.io/badge/License-MIT-yellow.svg'
+    }
+    if (answers.project_license === 'ISC') {
+      answersURL = 'https://img.shields.io/badge/License-ISC-blue.svg'
+    }
+    if (answers.project_license === 'BSD') {
+      answersURL = 'https://img.shields.io/badge/License-BSD%203--Clause-blue.svg'
+    }
+    axios.get(`https://api.github.com/users/${answer.github_userName}`)
+      .then((res) => {
+        response = res.data;
+        readme = generateReadme(response, answer, answersURL);
+        return writeFileSync("finished_readMe.md", readme);
+      })
+  })
+  .catch(function(err) {
+    console.log(err);
+  });
