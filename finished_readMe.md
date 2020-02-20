@@ -1,10 +1,11 @@
 
     
 # Project Name
-[![GitHub license](https://img.shields.io/badge/license-BSD%203--Clause-blue.svg)](https://github.com/BrennanPredmore/passwordGenerator)
+## passwordGenerator
+[![GitHub license](https://img.shields.io/badge/license-MIT-yellow.svg)](https://github.com/BrennanPredmore/passwordGenerator)
 
 ## Description
-``its awesome
+``d
 ``
 
 ## Table of Contents 
@@ -30,14 +31,14 @@ npm i
 ```
 
 ## Usage
-``this its the best thing since sliced bread
+``dagdga
 ``
 ## License
 
-This project is licensed under the BSD.
+This project is licensed under the MIT.
 
 ## Contributing
-``do not do it
+``dgad
 ``
 
 ## Tests

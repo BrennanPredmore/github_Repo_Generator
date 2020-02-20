@@ -1,11 +1,9 @@
 # github_Repo_Generator
 # Portfolio
 
-This is composed of 3 pages
-Index, Portfolio, and Contact
-The index page has a brief 'about me' section with an image of myself 
-The portfolio page has a list of 3 projects, my resume, my github, and my linkedIn
-The contact page has a contact form for the server to input a messgae to my email.
+This is composed of Index.js
+This is a github repo generator using node.js to prompt the user a series of question to be dynamically injected into a seperate final readme file.
+
 
 ![GIF]()
 

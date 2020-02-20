@@ -57,7 +57,7 @@ function generateReadme(response, answer, answersURL) {
     return `
     
 # Project Name
-${answer.project_name}
+## ${answer.project_name}
 [![GitHub license](https://img.shields.io/badge/license-${answer.answersURL})](https://github.com/${answer.github_userName}/${answer.project_name})
 
 ## Description
