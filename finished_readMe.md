@@ -1,10 +1,11 @@
 
-# demo_day_project2
-[![GitHub license](https://img.shields.io/badge/license-GPL%203.0-blue.svg)](https://github.com/calvincarter/demo_day_project2)
+    
+# Project Name
+[![GitHub license](https://img.shields.io/badge/license-BSD%203--Clause-blue.svg)](https://github.com/BrennanPredmore/passwordGenerator)
 
 ## Description
-
-the best project ever project
+``its awesome
+``
 
 ## Table of Contents 
 
@@ -29,16 +30,15 @@ npm i
 ```
 
 ## Usage
-
-nothing just welcome all hands on deck
-
+``this its the best thing since sliced bread
+``
 ## License
 
-This project is licensed under the GPL 3.0 license.
-  
-## Contributing
+This project is licensed under the BSD.
 
-please help
+## Contributing
+``do not do it
+``
 
 ## Tests
 
@@ -50,7 +50,6 @@ npm test
 
 ## Questions
 
-<img src="https://avatars1.githubusercontent.com/u/4831868?v=4" alt="avatar" style="border-radius: 16px" width="30" />
+![https://avatars1.githubusercontent.com/u/56494375?v=4](https://avatars1.githubusercontent.com/u/56494375?v=4)
 
-If you have any questions about the repo, open an issue or contact [calvincarter](https://api.github.com/users/calvincarter).
-
+If you have any questions about the repo, open an issue or contact [BrennanPredmore](https://api.github.com/users/BrennanPredmore).

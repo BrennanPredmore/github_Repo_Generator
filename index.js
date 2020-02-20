@@ -56,12 +56,15 @@ return inquirer.prompt([{
 function generateReadme(response, answer, answersURL) {
     return `
     
-# demo_day_project2
-[![GitHub license](https://img.shields.io/badge/license-GPL%203.0-blue.svg)](https://github.com/calvincarter/demo_day_project2)
+# Project Name
+${answer.project_name}
+[![GitHub license](https://img.shields.io/badge/license-${answer.answersURL})](https://github.com/${answer.github_userName}/${answer.project_name})
 
 ## Description
+\`\`\
+${answer.project_description}
+\`\`\
 
-the best project ever project
 
 ## Table of Contents 
 
@@ -86,49 +89,56 @@ ${answer.install_dependencies}
 \`\`\`
 
 ## Usage
-
-nothing just welcome all hands on deck
+\`\`\
+${answer.user_needToKnow}
+\`\`\
 
 ## License
 
-This project is licensed under the GPL 3.0 license.
-  
-## Contributing
+This project is licensed under the ${answer.project_license}.
 
-please help
+## Contributing
+\`\`\
+${answer.repo_contributing}
+\`\`\
+
 
 ## Tests
 
 To run tests, run the following command:
 
 \`\`\`
-npm test
+${answer.run_tests}
 \`\`\`
 
 ## Questions
 
-<img src="https://avatars1.githubusercontent.com/u/4831868?v=4" alt="avatar" style="border-radius: 16px" width="30" />
+![${response.avatar_url}](${response.avatar_url})
 
-If you have any questions about the repo, open an issue or contact [calvincarter](https://api.github.com/users/calvincarter).`;
+If you have any questions about the repo, open an issue or contact [${answer.github_userName}](https://api.github.com/users/${answer.github_userName}).`;
+
+
 }
 
+// IF STATEMENTS FOR THE LICENSES
 promptUser()
   .then(function(answer) {
     if (answer.project_license === 'Mozilla') {
-      answersURL = 'https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg'
+      answersURL = 'MPL%202.0-brightgreen.svg'
     }
-    if (answers.project_license === 'MIT') {
-      answersURL = 'https://img.shields.io/badge/License-MIT-yellow.svg'
+    if (answer.project_license === 'MIT') {
+      answersURL = 'MIT-yellow.svg'
     }
-    if (answers.project_license === 'ISC') {
-      answersURL = 'https://img.shields.io/badge/License-ISC-blue.svg'
+    if (answer.project_license === 'ISC') {
+      answersURL = 'ISC-blue.svg'
     }
-    if (answers.project_license === 'BSD') {
-      answersURL = 'https://img.shields.io/badge/License-BSD%203--Clause-blue.svg'
+    if (answer.project_license === 'BSD') {
+      answersURL = 'BSD%203--Clause-blue.svg'
     }
     axios.get(`https://api.github.com/users/${answer.github_userName}`)
       .then((res) => {
         response = res.data;
+        answer.answersURL = answersURL
         readme = generateReadme(response, answer, answersURL);
         return writeFileSync("finished_readMe.md", readme);
       })
