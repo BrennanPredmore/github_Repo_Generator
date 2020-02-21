@@ -2,10 +2,10 @@
     
 # Project Name
 ## passwordGenerator
-[![GitHub license](https://img.shields.io/badge/license-MIT-yellow.svg)](https://github.com/BrennanPredmore/passwordGenerator)
+[![GitHub license](https://img.shields.io/badge/license-MPL%202.0-brightgreen.svg)](https://github.com/BrennanPredmore/passwordGenerator)
 
 ## Description
-``d
+``Its a random password generator
 ``
 
 ## Table of Contents 
@@ -31,14 +31,14 @@ npm i
 ```
 
 ## Usage
-``dagdga
+``This is a very useful application for secure passwords
 ``
 ## License
 
-This project is licensed under the MIT.
+This project is licensed under the Mozilla.
 
 ## Contributing
-``dgad
+``Anyone can contribute
 ``
 
 ## Tests
