@@ -1,6 +1,6 @@
 
     
-# Project Name
+# GITHUB REPO GENERATOR
 ## passwordGenerator
 [![GitHub license](https://img.shields.io/badge/license-MPL%202.0-brightgreen.svg)](https://github.com/BrennanPredmore/passwordGenerator)
 
