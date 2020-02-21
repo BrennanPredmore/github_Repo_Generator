@@ -1,5 +1,4 @@
 # github_Repo_Generator
-# Portfolio
 
 This is composed of Index.js
 This is a github repo generator using node.js to prompt the user a series of question to be dynamically injected into a seperate final readme file.
